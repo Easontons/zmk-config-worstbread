@@ -1,0 +1,12 @@
+file_format: "1"
+id: worst_bread
+name: Worst Bread
+type: shield
+url: https://github.com/Easontons/zmk-config-worstbread
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+siblings:
+  - worst_bread_left
+  - worst_bread_right
