@@ -1,10 +1,10 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/Easontons
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: Easontons
       revision: main
       import: app/west.yml
   self:
