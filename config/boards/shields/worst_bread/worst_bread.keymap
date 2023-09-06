@@ -71,7 +71,7 @@
             bindings = <
             &hm LCTL A      &hm LGUI S      &hm LALT H      &hl CUS T       &hl MUS N       &hm RALT E      &hm RGUI O     &hm RCTL I
                             &hl SYM0 D      &hl SYM1 R      &hl SYS C       &hl SYS L       &hl SYM1 K      &hl SYM0 U
-                                            &lt NUM SPC     &none           &none           &tw ALP1 BSPC
+                                            &lt NUM SPC     &none           &none           &lt ALP1 BSPC
             >;
         };
 
