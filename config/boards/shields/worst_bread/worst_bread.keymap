@@ -104,7 +104,7 @@
         symbol1 {
             bindings = <
             &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp LBKT        &kp LPAR        &kp RPAR        &kp RBKT
-                            &kp PRCNT       &kp CARET       &AMPS           &kp RBRC        &kp LT          &kp GT
+                            &kp PRCNT       &kp CARET       &kp AMPS        &kp RBRC        &kp LT          &kp GT
                                             &kp LCTL        &none           &none           &kp LBRC
             >;
         };
