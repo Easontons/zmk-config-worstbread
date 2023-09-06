@@ -18,6 +18,10 @@
 &lt {
     quick_tap_ms = <250>;
 };
+&sk {
+    release-after-ms = <3000>;
+    // quick-release;
+};
 
 / {
     combos {
@@ -48,6 +52,7 @@
             quick_tap_ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <15>;
         };
         hl: homerow_layer {
             compatible = "zmk,behavior-hold-tap";
@@ -83,7 +88,7 @@
             bindings = <
             &kp ESC         &kp N7          &kp N8          &kp N9          &kp N4          &kp N5          &kp N6          &kp KP_DOT
                             &kp LSFT        &kp X           &caps_word      &kp N1          &kp N2          &kp N3
-                                            &kp LCTL        &none           &none           &kp N0
+                                            &kp LCTRL       &none           &none           &kp N0
             >;
         };
 
@@ -91,7 +96,7 @@
             bindings = <
             &kp PLUS        &kp MINUS       &kp STAR        &kp FSLH        &kp GRAVE       &kp TILDE       &kp SQT         &kp DQT
                             &kp UNDER       &kp BSLH        &kp PIPE        &kp QMARK       &kp COMMA       &kp DOT
-                                            &kp LCTL        &none           &none           &kp EQUAL
+                                            &kp LCTRL       &none           &none           &kp EQUAL
             >;
         };
 
@@ -99,7 +104,7 @@
             bindings = <
             &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp LBKT        &kp LPAR        &kp RPAR        &kp RBKT
                             &kp PRCNT       &kp CARET       &kp AMPS        &kp RBRC        &kp LT          &kp GT
-                                            &kp LCTL        &none           &none           &kp LBRC
+                                            &kp LCTRL       &none           &none           &kp LBRC
             >;
         };
 
@@ -129,7 +134,7 @@
 
         custom {
             bindings = <
-            &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &none           &kp LSFT        &sk LALT        &sk LGUI        &sk LCTL
+            &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &none           &sk LSHIFT      &sk LALT        &sk LGUI        &sk LCTRL
                             &kp LSFT        &kp X           &caps_word      &kp LS(TAB)     &trans          &kp TAB
                                             &kp LSFT        &none           &none           &sk LS(LA(LCTRL))
             >;
@@ -144,3 +149,4 @@
         };
     };
 };
+
