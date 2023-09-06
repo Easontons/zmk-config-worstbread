@@ -48,7 +48,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hl_l: homerow_layer {
+        hl_l: homerow_layer_l {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LAYER_L";
             #binding-cells = <2>;
@@ -57,7 +57,7 @@
             flavor = "tap-preferred";
             bindings = <&lt>, <&kp>;
         };
-        hl_r: homerow_layer {
+        hl_r: homerow_layer_r {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LAYER_R";
             #binding-cells = <2>;
