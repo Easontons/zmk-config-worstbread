@@ -73,7 +73,7 @@
             bindings = <
             &hm LCTL A      &hm LGUI S      &hm LALT H      &hl CUS T       &hl MUS N       &hm RALT E      &hm RGUI O     &hm RCTL I
                             &hl SYM0 D      &hl SYM1 R      &hl SYS C       &hl SYS L       &hl SYM1 K      &hl SYM0 U
-                                            &lt NUM SPC     &none           &none           &tw ALP1 BKSP
+                                            &lt NUM SPC     &none           &none           &tw ALP1 BSPC
             >;
         };
 
@@ -81,7 +81,7 @@
             bindings = <
             &kp Q           &kp W           &kp M           &kp B           &kp Y           &kp J           &kp F         &kp SEMI
                             &kp Z           &kp X           &kp V           &kp G           &kp P           &mo FUNC
-                                            &kp SPC         &none           &none           &kp BKSP
+                                            &kp SPC         &none           &none           &none
             >;
         };
 
