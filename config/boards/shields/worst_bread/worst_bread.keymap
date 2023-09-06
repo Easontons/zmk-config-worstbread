@@ -15,6 +15,10 @@
 #define CUS  8
 #define BT   9
 
+&lt {
+    quick_tap_ms = <250>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -32,7 +36,7 @@
             label = "TYPE_WRITE";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <50>;
+            quick_tap_ms = <250>;
             bindings = <&lt>, <&kp>;
         };
         hm: homerow_mod {
@@ -40,27 +44,27 @@
             label = "HOMEROW_MOD";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            quick_tap_ms = <50>;
+            quick_tap_ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hl: homerow_layer {
+        hl_l: homerow_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYER";
+            label = "HOMEROW_LAYER_L";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
-            quick_tap_ms = <50>;
+            quick_tap_ms = <250>;
             flavor = "tap-preferred";
             bindings = <&lt>, <&kp>;
         };
-	    td: tapdance {
+        hl_r: homerow_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAPDANCE";
+            label = "HOMEROW_LAYER_R";
             #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            quick_tap_ms = <0>;
+            tapping-term-ms = <220>;
+            quick_tap_ms = <250>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings = <&lt>, <&kp>;
         };
     };
 
@@ -69,8 +73,8 @@
 
         alpha0 {
             bindings = <
-            &hm LCTL A      &hm LGUI S      &hm LALT H      &hl CUS T       &hl MUS N       &hm RALT E      &hm RGUI O     &hm RCTL I
-                            &hl SYM0 D      &hl SYM1 R      &hl SYS C       &hl SYS L       &hl SYM1 K      &hl SYM0 U
+            &hm LCTL A      &hm LGUI S      &hm LALT H      &hl_l CUS T     &hl_r MUS N     &hm RALT E      &hm RGUI O     &hm RCTL I
+                            &hl_l SYM0 D    &hl_l SYM1 R    &hl_l SYS C     &hl_r SYS L     &hl_r SYM1 K    &hl_r SYM0 U
                                             &lt NUM SPC     &none           &none           &lt ALP1 BSPC
             >;
         };
