@@ -32,8 +32,7 @@
             label = "TYPE_WRITE";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
-            flavor = "hold-preferred";
+            quick_tap_ms = <50>;
             bindings = <&lt>, <&kp>;
         };
         hm: homerow_mod {
@@ -41,7 +40,7 @@
             label = "HOMEROW_MOD";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <50>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -50,7 +49,7 @@
             label = "HOMEROW_LAYER";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <50>;
             flavor = "tap-preferred";
             bindings = <&lt>, <&kp>;
         };
