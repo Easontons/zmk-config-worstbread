@@ -4,27 +4,149 @@
 // #include <dt-bindings/zmk/mouse.h>
 
 /* layers */
-#define alpha0 0
-#define alpha1 1
+#define ALP0 0
+#define ALP1 1
+#define NUM  2
+#define SYM0 3
+#define SYM1 4
+#define SYS  5
+#define FUNC 6
+#define MUS  7
+#define CUS  8
+#define BT   9
+
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-
-                alpha0 {
-                        bindings = <
-   &kp A   &kp S &kp H &kp T &kp N &kp E &kp O   &kp I
-           &kp D &kp R &kp C &kp L &kp K &kp U
-                 &kp SPC   &trans   &trans  &lt alpha1 BKSP
-                        >;
-                };
-
-                alpha1 {
-                        bindings = <
-   &kp Q   &kp W &kp M &kp B &kp Y &kp J &kp F   &kp I
-           &kp Z &kp X &kp V &kp G &kp P &trans
-                 &kp SPC   &trans   &trans  &kp BKSP
-                        >;
-                };
+    combos {
+        compatible = "zmk,combos";
+        combo_to_bt {
+            timeout-ms = <10>;
+            key-positions = <2 3>;
+            bindings = <&to BT>;
+            layers = <SYS>
         };
+    };
+
+    behaviors {
+        tw: type_write {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TYPE_WRITE";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "hold-preferred";
+            bindings = <&lt>, <&kp>;
+        };
+        hm: homerow_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MOD";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        hl: homerow_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&lt>, <&kp>;
+        };
+	    td: tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        alpha0 {
+            bindings = <
+            &hm LCTL A      &hm LGUI S      &hm LALT H      &hl CUS T       &hl MUS N       &hm RALT E      &hm RGUI O     &hm RCTL I
+                            &hl SYM0 D      &hl SYM1 R      &hl SYS C       &hl SYS L       &hl SYM1 K      &hl SYM0 U
+                                            &lt NUM SPC     &none           &none           &tw ALP1 BKSP
+            >;
+        };
+
+        alpha1 {
+            bindings = <
+            &kp Q           &kp W           &kp M           &kp B           &kp Y           &kp J           &kp F         &kp SEMI
+                            &kp Z           &kp X           &kp V           &kp G           &kp P           &mo FUNC
+                                            &kp SPC         &none           &none           &kp BKSP
+            >;
+        };
+
+        number {
+            bindings = <
+            &kp ESC         &kp N7          &kp N8          &kp N9          &kp N4          &kp N5          &kp N6          &kp KP_DOT
+                            &kp LSFT        &kp X           &caps_word      &kp N1          &kp N2          &kp N3
+                                            &kp LCTL        &none           &none           &kp N0
+            >;
+        };
+
+        symbol0 {
+            bindings = <
+            &kp PLUS        &kp MINUS       &kp STAR        &kp FSLH        &kp GRAVE       &kp TILDE       &kp SQT         &kp DQT
+                            &kp UNDER       &kp BSLH        &kp PIPE        &kp QMARK       &kp COMMA       &kp DOT
+                                            &kp LCTL        &none           &none           &kp EQUAL
+            >;
+        };
+
+        symbol1 {
+            bindings = <
+            &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp LBKT        &kp LPAR        &kp RPAR        &kp RBKT
+                            &kp PRCNT       &kp CARET       &AMPS           &kp RBRC        &kp LT          &kp GT
+                                            &kp LCTL        &none           &none           &kp LBRC
+            >;
+        };
+
+        system {
+            bindings = <
+            &kp DEL         &kp PG_UP       &kp INS         &kp PG_DN       &kp HOME        &kp UP          &kp END         &none
+                            &kp LC(C)       &kp LC(V)       &kp LC(Z)       &kp LEFT        &kp DOWN        &kp RIGHT
+                                            &kp TAB         &none           &none           &kp ENTER
+            >;
+        };
+
+        function {
+            bindings = <
+            &kp F1          &kp F2          &kp F3          &kp F4          &kp F9          &kp F10         &none           &none
+                            &kp F5          &kp F6          &kp F7          &kp F11         &kp F12         &none
+                                            &kp F8          &none           &none           &none
+            >;
+        };
+
+        mouse {
+            bindings = <
+            &kp ESC         &kp N7          &kp N8          &kp N9          &kp N4          &kp N5          &kp N6          &kp KP_DOT
+                            &kp LSFT        &kp X           &caps_word      &kp N1          &kp N2          &kp N3
+                                            &kp LS(LA(LCTRL))  &none           &none           &none
+            >;
+        };
+
+        custom {
+            bindings = <
+            &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &none           &kp LSFT        &sk LALT        &sk LGUI        &sk LCTL
+                            &kp LSFT        &kp X           &caps_word      &kp LS(TAB)     &trans          &kp TAB
+                                            &kp LSFT        &none           &none           &sk LS(LA(LCTRL))
+            >;
+        };
+
+        bluetooth {
+            bindings = <
+            &none           &none           &bt BT_PRV      &bt BT_NXT      &bt BT_SET 0    &bt BT_SET 1    &bt BT_SET 2    &bt BT_CLR
+                            &trans          &trans          &trans          &kp N1          &kp N2          &trans
+                                            &to ALP0        &none           &none           &trans
+            >;
+        };
+    };
 };
