@@ -15,7 +15,6 @@
 #define CUS  8
 #define BT   9
 
-
 / {
     combos {
         compatible = "zmk,combos";
