@@ -38,6 +38,7 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <250>;
             bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14>;
         };
         hm: homerow_mod {
             compatible = "zmk,behavior-hold-tap";
@@ -48,18 +49,9 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hl_l: homerow_layer_l {
+        hl: homerow_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYER_L";
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick_tap_ms = <250>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-        };
-        hl_r: homerow_layer_r {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYER_R";
+            label = "HOMEROW_LAYER";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
             quick_tap_ms = <250>;
@@ -73,9 +65,9 @@
 
         alpha0 {
             bindings = <
-            &hm LCTL A      &hm LGUI S      &hm LALT H      &hl_l CUS T     &hl_r MUS N     &hm RALT E      &hm RGUI O     &hm RCTL I
-                            &hl_l SYM0 D    &hl_l SYM1 R    &hl_l SYS C     &hl_r SYS L     &hl_r SYM1 K    &hl_r SYM0 U
-                                            &lt NUM SPC     &none           &none           &lt ALP1 BSPC
+            &hm LCTL A      &hm LGUI S      &hm LALT H      &hl CUS T       &hl MUS N       &hm RALT E      &hm RGUI O     &hm RCTL I
+                            &hl SYM0 D      &hl SYM1 R      &hl SYS C       &hl SYS L       &hl SYM1 K      &hl SYM0 U
+                                            &lt NUM SPC     &none           &none           &tw ALP1 BSPC
             >;
         };
 
