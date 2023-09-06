@@ -23,7 +23,7 @@
             timeout-ms = <10>;
             key-positions = <2 3>;
             bindings = <&to BT>;
-            layers = <SYS>
+            layers = <SYS>;
         };
     };
 
