@@ -52,7 +52,6 @@
             quick_tap_ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <15>;
         };
         hl: homerow_layer {
             compatible = "zmk,behavior-hold-tap";
@@ -62,6 +61,7 @@
             quick_tap_ms = <250>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <15>;
         };
     };
 
@@ -72,14 +72,14 @@
             bindings = <
             &hm LCTL A      &hm LGUI S      &hm LALT H      &hl CUS T       &hl MUS N       &hm RALT E      &hm RGUI O     &hm RCTL I
                             &hl SYM0 D      &hl SYM1 R      &hl SYS C       &hl SYS L       &hl SYM1 K      &hl SYM0 U
-                                            &lt NUM SPC     &none           &none           &tw ALP1 BSPC
+                                            &lt NUM SPC     &none           &none           &mo ALP1
             >;
         };
 
         alpha1 {
             bindings = <
-            &kp Q           &kp W           &kp M           &kp B           &kp Y           &kp J           &kp F         &kp SEMI
-                            &kp Z           &kp X           &kp V           &kp G           &kp P           &mo FUNC
+            &kp Q           &kp W           &kp M           &kp B           &kp Y           &kp J           &kp BSPC       &kp SEMI
+                            &kp Z           &kp X           &kp V           &kp G           &kp P           &kp F
                                             &kp SPC         &none           &none           &none
             >;
         };
@@ -110,7 +110,7 @@
 
         system {
             bindings = <
-            &kp DEL         &kp PG_UP       &kp INS         &kp PG_DN       &kp HOME        &kp UP          &kp END         &none
+            &kp DEL         &kp PG_UP       &kp INS         &kp PG_DN       &kp HOME        &kp UP          &kp END         &mo FUNC
                             &kp LC(C)       &kp LC(V)       &kp LC(Z)       &kp LEFT        &kp DOWN        &kp RIGHT
                                             &kp TAB         &none           &none           &kp ENTER
             >;
