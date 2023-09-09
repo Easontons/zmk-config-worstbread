@@ -12,3 +12,6 @@ config SHIELD_WORST_BREAD_DONGLE_RIGHT
 
 config SHIELD_WORST_BREAD_DONGLE
 	def_bool $(shields_list_contains,worst_bread_dongle)
+
+config SHIELD_DONGLE_RESET
+	def_bool $(shields_list_contains,dongle_reset)

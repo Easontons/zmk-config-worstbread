@@ -46,7 +46,7 @@
 /* === mouse support setting end === */
 
 &lt {
-    quick_tap_ms = <250>;
+    quick_tap_ms = <200>;
     flavor = "tap-preferred";
 };
 &sk {
@@ -62,6 +62,24 @@
             key-positions = <2 3>;
             bindings = <&to BT>;
             layers = <SYS>;
+        };
+        combo_bspc {
+            timeout-ms = <20>;
+            key-positions = <5 6>;
+            bindings = <&kp BSPC>;
+            layers = <NUM>;
+        };
+        combo_sk_shift {
+            timeout-ms = <20>;
+            key-positions = <1 2 3>;
+            bindings = <&sk LSHIFT>;
+            layers = <ALP0 ALP1>;
+        };
+        combo_key_repeat {
+            timeout-ms = <20>;
+            key-positions = <8 9 10>;
+            bindings = <&key_repeat>;
+            layers = <ALP0>;
         };
     };
 
