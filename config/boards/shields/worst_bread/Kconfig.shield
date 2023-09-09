@@ -3,3 +3,12 @@ config SHIELD_WORST_BREAD_LEFT
 
 config SHIELD_WORST_BREAD_RIGHT
 	def_bool $(shields_list_contains,worst_bread_right)
+
+config SHIELD_WORST_BREAD_DONGLE_LEFT
+	def_bool $(shields_list_contains,worst_bread_dongle_left)
+
+config SHIELD_WORST_BREAD_DONGLE_RIGHT
+	def_bool $(shields_list_contains,worst_bread_dongle_right)
+
+config SHIELD_WORST_BREAD_DONGLE
+	def_bool $(shields_list_contains,worst_bread_dongle)

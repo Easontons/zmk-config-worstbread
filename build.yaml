@@ -17,3 +17,9 @@ include:
     shield: worst_bread_left
   - board: nice_nano_v2
     shield: worst_bread_right
+  - board: nice_nano_v2
+    shield: worst_bread_dongle_left
+  - board: nice_nano_v2
+    shield: worst_bread_dongle_right
+  - board: nice_nano_v2
+    shield: worst_bread_dongle

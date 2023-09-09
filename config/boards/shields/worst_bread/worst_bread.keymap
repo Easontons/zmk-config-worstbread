@@ -17,7 +17,7 @@
 
 /* === mouse support setting start === */
 // mouse move settings
-// #define U_MOUSE_MOVE_MAX 600                     /* <--- New max speed setting (default: 600) */
+// #define U_MOUSE_MOVE_MAX 800                     /* <--- New max speed setting (default: 600) */
 // #undef MOVE_UP
 // #undef MOVE_DOWN
 // #undef MOVE_LEFT
@@ -31,7 +31,7 @@
 };
 
 // mouse wheel settings
-// #define U_MOUSE_SCROLL_MAX 10                    /* <--- New max speed setting (default: 10) */
+// #define U_MOUSE_SCROLL_MAX 20                    /* <--- New max speed setting (default: 10) */
 // #undef SCROLL_UP
 // #undef SCROLL_DOWN
 // #undef SCROLL_LEFT
