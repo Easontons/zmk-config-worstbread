@@ -16,7 +16,7 @@ config ZMK_SPLIT
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
-config_ZMK_USB
+config ZMK_USB
   	default y
 
 endif # SHIELD_WORST_BREAD_DONGLE || SHIELD_WORST_BREAD_LEFT
