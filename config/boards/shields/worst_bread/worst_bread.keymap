@@ -183,7 +183,7 @@
         custom {
             bindings = <
             &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &none           &sk LSHIFT      &sk LALT        &sk LGUI        &sk LCTRL
-                            &kp LSFT        &kp X           &caps_word      &kp LS(TAB)     &trans          &kp TAB
+                            &none           &none           &kp PSCRN       &kp LS(TAB)     &trans          &kp TAB
                                             &kp LSFT        &none           &none           &sk LS(LA(LCTRL))
             >;
         };
