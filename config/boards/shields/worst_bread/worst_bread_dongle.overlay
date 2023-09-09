@@ -7,6 +7,10 @@
 #include "worst_bread.dtsi"
 
 / {
+    chosen {
+		zmk,kscan = &kscan0;
+	};
+
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-direct";
 		label = "KSCAN";
