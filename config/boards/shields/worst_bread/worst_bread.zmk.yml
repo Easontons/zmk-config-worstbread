@@ -10,3 +10,6 @@ features:
 siblings:
   - worst_bread_left
   - worst_bread_right
+  - worst_bread_dongle_left
+  - worst_bread_dongle_right
+  - worst_bread_dongle
