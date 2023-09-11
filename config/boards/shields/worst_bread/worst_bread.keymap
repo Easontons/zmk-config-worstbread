@@ -125,7 +125,7 @@
         alpha0 {
             bindings = <
             &hm LCTL A      &hm LGUI S      &hm LALT H      &hl CUS T       &hl MUS N       &hm RALT E      &hm RGUI O     &hm RCTL I
-                            &hl SYM0 D      &hl SYM1 R      &hl SYS C       &hl SYS L       &hl SYM1 K      &hl SYM0 BSPC
+                            &hl SYM0 D      &hl SYM1 R      &hl SYS C       &hl SYS L       &hl SYM1 K      &hl SYM0 U
                                             &lt NUM SPC     &none           &none           &mo ALP1
             >;
         };
@@ -133,7 +133,7 @@
         alpha1 {
             bindings = <
             &kp Q           &kp W           &kp M           &kp B           &kp Y           &kp J           &kp F         &kp SEMI
-                            &kp Z           &kp X           &kp V           &kp G           &kp P           &kp U
+                            &kp Z           &kp X           &kp V           &kp G           &kp P           &kp BSPC
                                             &kp SPC         &none           &none           &none
             >;
         };
