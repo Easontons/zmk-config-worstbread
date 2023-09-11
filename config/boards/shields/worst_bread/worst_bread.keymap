@@ -71,7 +71,7 @@
         };
         combo_caps {
             timeout-ms = <20>;
-            key-positions = <12 13 14>;
+            key-positions = <11 12 13>;
             bindings = <&kp CAPS>;
             layers = <ALP0>;
         };
@@ -97,7 +97,7 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <250>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13>;
         };
         hm: homerow_mod {
             compatible = "zmk,behavior-hold-tap";
