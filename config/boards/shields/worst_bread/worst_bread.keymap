@@ -67,7 +67,13 @@
             timeout-ms = <20>;
             key-positions = <5 6>;
             bindings = <&kp BSPC>;
-            layers = <NUM>;
+            layers = <ALP0 ALP1 NUM>;
+        };
+        combo_caps {
+            timeout-ms = <20>;
+            key-positions = <12 13 14>;
+            bindings = <&kp CAPS>;
+            layers = <ALP0>;
         };
         combo_sk_shift {
             timeout-ms = <20>;
