@@ -65,7 +65,7 @@
         };
         combo_bspc {
             timeout-ms = <20>;
-            key-positions = <12 13>;
+            key-positions = <11 12>;
             bindings = <&kp BSPC>;
             layers = <ALP0 ALP1 NUM>;
         };
