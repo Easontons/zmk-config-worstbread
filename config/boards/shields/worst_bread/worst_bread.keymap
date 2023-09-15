@@ -53,6 +53,10 @@
     release-after-ms = <3000>;
     // quick-release;
 };
+&sl {
+    release-after-ms = <2000>;
+    // quick-release;
+};
 
 / {
     combos {
@@ -164,7 +168,7 @@
 
         system {
             bindings = <
-            &kp DEL         &kp PG_UP       &kp INS         &kp PG_DN       &kp HOME        &kp UP          &kp END         &mo FUNC
+            &kp DEL         &kp PG_UP       &kp INS         &kp PG_DN       &kp HOME        &kp UP          &kp END         &sl FUNC
                             &kp LC(C)       &kp LC(V)       &kp LC(Z)       &kp LEFT        &kp DOWN        &kp RIGHT
                                             &kp TAB         &none           &none           &kp ENTER
             >;
