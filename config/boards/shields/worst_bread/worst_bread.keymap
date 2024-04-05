@@ -17,7 +17,7 @@
 
 /* === mouse support setting start === */
 // mouse move settings
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 800                     /* <--- New max speed setting (default: 800) */
+// #define ZMK_MOUSE_DEFAULT_MOVE_VAL 800                     /* <--- New max speed setting (default: 800) */
 &mmv {
     acceleration-exponent = <1>;
 	time-to-max-speed-ms = <500>;             /* <--- How long time until max speed is reached (default: 500) */
@@ -25,7 +25,7 @@
 };
 
 // mouse wheel settings
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20                    /* <--- New max speed setting (default: 10) */
+// #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20                    /* <--- New max speed setting (default: 10) */
 &msc {
     // acceleration-exponent = <1>;
     time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
