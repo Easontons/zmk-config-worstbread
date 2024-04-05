@@ -17,31 +17,19 @@
 
 /* === mouse support setting start === */
 // mouse move settings
-#define U_MOUSE_MOVE_MAX 800                     /* <--- New max speed setting (default: 600) */
-#undef MOVE_UP
-#undef MOVE_DOWN
-#undef MOVE_LEFT
-#undef MOVE_RIGHT
-#define MOVE_UP MOVE_VERT(-U_MOUSE_MOVE_MAX)
-#define MOVE_DOWN MOVE_VERT(U_MOUSE_MOVE_MAX)
-#define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
-#define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 800                     /* <--- New max speed setting (default: 800) */
 &mmv {
+    acceleration-exponent = <1>;
 	time-to-max-speed-ms = <500>;             /* <--- How long time until max speed is reached (default: 500) */
+    delay-ms = <0>;
 };
 
 // mouse wheel settings
-#define U_MOUSE_SCROLL_MAX 20                    /* <--- New max speed setting (default: 10) */
-#undef SCROLL_UP
-#undef SCROLL_DOWN
-#undef SCROLL_LEFT
-#undef SCROLL_RIGHT
-#define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-#define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
-&mwh {
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20                    /* <--- New max speed setting (default: 10) */
+&msc {
+    // acceleration-exponent = <1>;
     time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
+    // delay-ms = <0>;
 };
 /* === mouse support setting end === */
 
@@ -184,7 +172,7 @@
 
         mouse {
             bindings = <
-            &none           &mwh SCROLL_UP  &mmv MOVE_UP    &mwh SCROLL_DOWN &none           &mkp LCLK       &mkp RCLK       &kp DOT
+            &none           &mwh SCRL_UP    &mmv MOVE_UP    &mwh SCRL_DOWN   &none           &mkp LCLK       &mkp RCLK       &kp DOT
                             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &none           &none
                                             &kp LS(LA(LCTRL))    &none       &none           &none
             >;
