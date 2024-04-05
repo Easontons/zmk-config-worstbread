@@ -172,7 +172,7 @@
 
         mouse {
             bindings = <
-            &none           &mwh SCRL_UP    &mmv MOVE_UP    &mwh SCRL_DOWN   &none           &mkp LCLK       &mkp RCLK       &kp DOT
+            &none           &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none           &mkp LCLK       &mkp RCLK       &kp DOT
                             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &none           &none
                                             &kp LS(LA(LCTRL))    &none       &none           &none
             >;
